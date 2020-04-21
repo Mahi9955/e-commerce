@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Student Registration Form</title>
+
+	<style>
+.error {
+	color: red
+}
+</style>
+</h:head>
+<h:body>
+	<ui:composition>
+		<h1
+			style="border-width: 2px; border-color: purple; border-style: solid; background-color: purple; color: white; font-size: 57px;">
+			Create a New Movie</h1>
+		<h:form>
+			<!-- <h:messages styleClass="error"/> -->
+			<table>
+				<tr>
+					<td>Title :</td>
+					<td><h:inputText id="title" value="#{movie.title}"
+							label="Title" /></td>
+				</tr>
+				<tr>
+
+					<td>Description :</td>
+					<td><h:inputTextarea id="descpt" value="#{movie.description}"
+							label="Description" required="true" /> <h:messages
+							for="lastName" styleClass="error" /></td>
+				</tr>
+
+				<tr>
+					<td>Company:</td>
+					<td><h:inputText id="company" value="#{movie.company}"
+							label="Company" required="true" /> <h:messages for="company"
+							styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td>Platform:</td>
+					<td><h:inputText id="platForm" value="#{movie.platform}"
+							label="Platform" required="true" /> <h:messages for="platform"
+							styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td>Classification:</td>
+					<td><h:inputText id="classi" value="#{movie.classification}"
+							label="classification" required="true" /> <h:messages
+							for="classification" styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td>Price:</td>
+					<td><h:inputText id="price" value="#{movie.price}"
+							label="price" required="true" /> <h:messages for="price"
+							styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td>Stock Number:</td>
+					<td><h:inputText id="stockNumber" value="#{movie.stockNumber}"
+							label="stockNumber" required="true" /> <h:messages
+							for="stockNumber" styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td>Duration (minutes):</td>
+					<td><h:inputText id="duration" value="#{movie.duration}"
+							label="duration" required="true" /> <h:messages for="duration"
+							styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+
+					<td>Special Features:</td>
+					<td><h:inputText id="specialFeatures"
+							value="#{movie.specialFeatures}" label="specialFeatures"
+							required="true" /> <h:messages for="specialFeatures"
+							styleClass="error"></h:messages></td>
+				</tr>
+
+				<tr>
+					<td><h:commandButton value="Create a Movie"
+							action="response_form" /></td>
+				</tr>
+
+			</table>
+		</h:form>
+
+		<br />
+		<br />
+		<a href="Index.xhtml">Main Page</a>
+		<br />
+		<br />
+	</ui:composition>
+</h:body>
+</html>
