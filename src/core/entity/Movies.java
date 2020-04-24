@@ -1,26 +1,83 @@
-package core.bean;
+package core.entity;
 
-import javax.faces.bean.ManagedBean;
+import java.io.Serializable;
 
-/**
- * @author mahi
- *
- */
-@ManagedBean
-public class Movie {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "movie")
+public class Movies implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
+	private int id;
 	
+	@Column
 	private String title;
-	private String description;
-	private String company;
-	private String platform;
-	private String classification;
-	private double price;
-	private int stockNumber;
-	private int duration;
-	private String specialFeatures;
 	
-	public Movie() {
-		//no-args constructor
+	@Column
+	private String description;
+	
+	@Column
+	private String company;
+	
+	@Column(name = "plat_form")
+	private String platform;
+	
+	@Column
+	private String classification;
+	
+	@Column
+	private double price;
+	
+	@Column(name = "stock_number")
+	private int stockNumber;
+	
+	@Column
+	private int duration;
+	
+	@Column(name = "special_features")
+	private String specialFeatures;
+
+	
+	public Movies() {
+		// no-args constructor
+	}
+
+	
+	public Movies(int id, String title, String description, String company, String platform, String classification,
+			double price, int stockNumber, int duration, String specialFeatures) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.company = company;
+		this.platform = platform;
+		this.classification = classification;
+		this.price = price;
+		this.stockNumber = stockNumber;
+		this.duration = duration;
+		this.specialFeatures = specialFeatures;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -94,5 +151,4 @@ public class Movie {
 	public void setSpecialFeatures(String specialFeatures) {
 		this.specialFeatures = specialFeatures;
 	}
-
 }

@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15873397959900" configfile="/e-commerce/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15873397959900" configfile="/e-commerce/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="response_form.xhtml" id="pf15874908142428" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf15874908142429" inlinks="pf15874908142429 pf158749082056610" path="/response_form.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="submit_form.xhtml" id="pf158749082056611" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf158749082056610" path="/submit_form.xhtml"/>
+  <links id="pf15874908142429" target="pf15874908142428" source="pf15874908142428" outcome="back"/>
+  <links id="pf158749082056610" target="pf15874908142428" source="pf158749082056611" outcome="success"/>
+</pageflow:Pageflow>

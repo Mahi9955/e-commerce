@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:c="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:c="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
 	<title>Student Registration Form</title>
@@ -23,55 +23,55 @@
 			<table>
 				<tr>
 					<td>Title :</td>
-					<td><h:inputText id="title" value="#{movie.title}"
+					<td><h:inputText id="title" value="#{movie.movies.title}" 
 							label="Title" /></td>
 				</tr>
 				<tr>
 
 					<td>Description :</td>
-					<td><h:inputTextarea id="descpt" value="#{movie.description}"
+					<td><h:inputTextarea id="descpt" value="#{movie.movies.description}"
 							label="Description" required="true" /> <h:messages
 							for="lastName" styleClass="error" /></td>
 				</tr>
 
 				<tr>
 					<td>Company:</td>
-					<td><h:inputText id="company" value="#{movie.company}"
+					<td><h:inputText id="company" value="#{movie.movies.company}"
 							label="Company" required="true" /> <h:messages for="company"
 							styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td>Platform:</td>
-					<td><h:inputText id="platForm" value="#{movie.platform}"
+					<td><h:inputText id="platForm" value="#{movie.movies.platform}"
 							label="Platform" required="true" /> <h:messages for="platform"
 							styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td>Classification:</td>
-					<td><h:inputText id="classi" value="#{movie.classification}"
+					<td><h:inputText id="classi" value="#{movie.movies.classification}"
 							label="classification" required="true" /> <h:messages
 							for="classification" styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td>Price:</td>
-					<td><h:inputText id="price" value="#{movie.price}"
+					<td><h:inputText id="price" value="#{movie.movies.price}"
 							label="price" required="true" /> <h:messages for="price"
 							styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td>Stock Number:</td>
-					<td><h:inputText id="stockNumber" value="#{movie.stockNumber}"
+					<td><h:inputText id="stockNumber" value="#{movie.movies.stockNumber}"
 							label="stockNumber" required="true" /> <h:messages
 							for="stockNumber" styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td>Duration (minutes):</td>
-					<td><h:inputText id="duration" value="#{movie.duration}"
+					<td><h:inputText id="duration" value="#{movie.movies.duration}"
 							label="duration" required="true" /> <h:messages for="duration"
 							styleClass="error"></h:messages></td>
 				</tr>
@@ -80,14 +80,14 @@
 
 					<td>Special Features:</td>
 					<td><h:inputText id="specialFeatures"
-							value="#{movie.specialFeatures}" label="specialFeatures"
+							value="#{movie.movies.specialFeatures}" label="specialFeatures"
 							required="true" /> <h:messages for="specialFeatures"
 							styleClass="error"></h:messages></td>
 				</tr>
 
 				<tr>
 					<td><h:commandButton value="Create a Movie"
-							action="response_form" /></td>
+							action="#{movie.saveMovies}" /></td>
 				</tr>
 
 			</table>
